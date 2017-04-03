@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PracticalTest01Var04</string>
+    <string name="title_activity_practical_test01_var04_play">PracticalTest01Var04PlayActivity
+    </string>
+    <string name="play_button">Play</string>
+    <string name="number_text">Number</string>
+</resources>
