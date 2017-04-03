@@ -4,4 +4,8 @@
     </string>
     <string name="play_button">Play</string>
     <string name="number_text">Number</string>
+    <string name="guess_text">Guess</string>
+    <string name="back_button">Back</string>
+    <string name="check_button">Check</string>
+    <string name="generate_button">Generate</string>
 </resources>

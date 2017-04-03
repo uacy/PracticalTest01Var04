@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    int SECONDARY_ACTIVITY_REQUEST_CODE = -1;
+
     private EditText editText = null;
     private Button button = null;
     private ButtonClickListener buttonClickListener = new ButtonClickListener();
@@ -22,7 +24,10 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             if (view.getId() == R.id.button) {
-                
+                Intent intent = new Intent(getApplicationContext(), PracticalTest01Var04PlayActivity.class);
+                int number = Integer.parseInt(editText.getText().toString());
+                intent.putExtra("numberOfClicks", number);
+                startActivityForResult(intent, SECONDARY_ACTIVITY_REQUEST_CODE);
             }
         }
     }
@@ -36,5 +41,13 @@ public class MainActivity extends AppCompatActivity {
         button = (Button)findViewById(R.id.button);
 
         button.setOnClickListener(buttonClickListener);
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        if (requestCode == SECONDARY_ACTIVITY_REQUEST_CODE) {
+            Toast.makeText(this, "The activity returned with result " + resultCode, Toast.LENGTH_LONG).show();
+        }
     }
 }
