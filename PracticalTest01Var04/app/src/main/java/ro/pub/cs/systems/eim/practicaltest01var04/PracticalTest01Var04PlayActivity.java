@@ -36,6 +36,7 @@ public class PracticalTest01Var04PlayActivity extends AppCompatActivity {
                     break;
                 case R.id.button3:
                     break;
+            }
         }
     }
 
